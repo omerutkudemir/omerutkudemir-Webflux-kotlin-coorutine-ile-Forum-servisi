@@ -20,14 +20,6 @@ Uygulama, kullanıcıların gönderi paylaşabildiği, yanıtlayabildiği ve be�
 
 ---
 
-## Proje Yapısı
-com.poslifay.Poslifay_social_service
-├── controller/ # REST endpointler
-├── service/ # İş mantığı ve akışlar
-├── repository/ # WebClient ve veri erişim katmanı
-├── config/ # WebClient bean ve konfigürasyonlar
-└── model/ # Entity ve DTO sınıfları
-resources/db/migration/ # Flyway migration scriptleri
 
 
 
