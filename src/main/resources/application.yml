@@ -1,0 +1,33 @@
+server:
+  address: 0.0.0.0
+  port: 8082
+
+spring:
+  application:
+    name: Poslifay-social-service
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/poslifay_entry_service_db
+    username: postgres
+    password: omerutkudemir
+
+
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/poslifay_entry_service_db
+    user: postgres
+    password: omerutkudemir
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
